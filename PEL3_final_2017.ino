@@ -1,4 +1,4 @@
- /* PELS3 - Universal Electronic Lead Screw Code. This code is to be used on and Electronic Lead Screw outlined in: "An Electronic Lead screw for a D6000 Wabeco Lathe", by D.B Plewes, 
+ /* PELS3 - August 14, 2017- Universal Electronic Lead Screw Code. This code is to be used on and Electronic Lead Screw outlined in: "An Electronic Lead screw for a D6000 Wabeco Lathe", by D.B Plewes, 
   Digital Machinist, Vol 11, No.4, 6-19, 2016). This uses a 1024 pulse/spindle-rev encoder on the D6000 lathe and assumes a 400 steps/revolution attached to the lead screw.  
   This uses floating point arithmetic by comparing the desired thread position and against the discrete position which has been delivered by the stepper motor.  
   The code updates the step pulses as needed to keep the same position between the desired position at that delivered. The selection between metric and imperial threads is 
@@ -49,6 +49,7 @@ for the cross-slide set at 59.5 degrees are shown on the LCD display for each th
  int newButtonState = 0;                            //a parameter for the button push algorithm
  int oldButtonState=0;                              //a parameter for the button push algorithm
  int mode_select=1;                                 // a parameter to define the programming versus operation settings
+ int tpi;                                           // a paremter to define the number of threads/inch
 
  float depth;                                       // a parameter to define the thread depth in mm on the compound slide. This is set at 75% of the pitch which seems to work
  float pitch_factor=0.75;                           // a parameter to define how deep to push the oblique cutter for each thread pitch in mm. May differ depending on thread design. This one works
