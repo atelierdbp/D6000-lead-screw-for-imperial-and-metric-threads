@@ -1,5 +1,5 @@
  /* PELS3 - August 14, 2017- Universal Electronic Lead Screw Code. This code is to be used on and Electronic Lead Screw outlined in: "An Electronic Lead screw for a D6000 Wabeco Lathe", by D.B Plewes, 
-  Digital Machinist, Vol 11, No.4, 6-19, 2016). This uses a 1024 pulse/spindle-rev encoder on the D6000 lathe and assumes a 400 steps/revolution attached to the lead screw.  
+  Digital Machinist, Vol 11, No.4, 6-19, 2016). This uses a 1024 pulse/spindle-rev encoder on the Wabeco D6000 lathe and assumes a 400 steps/revolution attached to the lead screw.  
   This uses floating point arithmetic by comparing the desired thread position and against the discrete position which has been delivered by the stepper motor.  
   The code updates the step pulses as needed to keep the same position between the desired position at that delivered. The selection between metric and imperial threads is 
   achieved by a push-button on a rotary encoder while the value of the thread/turning parameters are achieved by rotating the rotary switch.
